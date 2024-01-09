@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Order Form</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <div class="container">
+       <form method="post" action="ProcessOrder.php">
+            <h3>Item</h3>
+            <h3>Quantity</h3>
+
+            <label for="txtTires">Tires</label>
+            <input type="text" id="txtTires" name="txtTires">
+
+            <label for="txtOil">Oil</label>
+            <input type="text" id="txtOil" name="txtOil">
+
+            <label for="txtSpark">Spark Plugs</label>
+            <input type="text" id="txtSpark" name="txtSpark">
+
+            <button type="submit" id="btnSubmit">submit order</button>
+        </form>   
+    </div>
+</body>
+</html>

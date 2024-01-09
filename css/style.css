@@ -1,0 +1,83 @@
+
+h1 {
+    text-transform: capitalize;
+}
+body {
+    background: #c06e52;
+    padding: 3px;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: .1em;
+    font-size: 20px;
+}
+.container {
+    width: 800px;
+    height: 600px;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+form {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 16px;
+    padding: 20px;
+}
+label {
+    grid-column: 1 / 2;
+}
+input,
+button {
+    grid-column: 2 / 3;
+}
+.heading {
+    text-align: center;
+}
+.small-heading {
+    text-transform: capitalize;
+    display: inline;
+}
+#btnSubmit {
+    margin-top: 20px;
+    color: white;
+    border-radius: 7px;
+    background: blue;
+    font-size: 1.6rem;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    outline: none;
+    text-transform: capitalize;
+}
+#btnSubmit:hover {
+    background: darkblue;
+    box-shadow: 3px solid red;
+    color: #00BCDD;
+}
+.number {
+    font-weight: bold;
+    font-size: 24px;
+}
+.date {
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+}
+input[type=text] {
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+}
+input[type=text]:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.result {
+    width: 60%;
+    border: 5px solid black;
+    margin-left: 20%;
+    padding: 20px;
+}
+.error {
+    color: red;
+    font-style: italic;
+}

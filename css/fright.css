@@ -1,0 +1,44 @@
+body {
+    background: hsl(750deg, 50%, 50%);
+}
+.container {
+    padding: 0;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+.table {
+    width: 400px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    background: gainsboro;
+    
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid hsl(210deg, 10%, 40%);
+    border-radius: 4px;
+}
+.cell {
+    display: grid;
+    place-content: end;
+    grid-column: span 2;
+    color: darkblue;
+    border: 2px solid hsl(210deg, 8%, 50%);
+    border-radius: 4px;
+    margin-right: 20px;
+    padding-right: 3px;
+    font-weight: 700;
+    background: white;
+}
+.header {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.measure {
+    display: grid;
+    place-content: end;
+    margin-right: 25px;
+}
+.col-span-2 {
+    grid-column: span 2;
+}
