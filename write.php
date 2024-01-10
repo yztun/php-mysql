@@ -4,9 +4,15 @@
 
 $document_root = $_SERVER['DOCUMENT_ROOT'];
 
-$fileName = "$document_root/php-mysql/orders/orders.txt";
+$fileName = "$document_root/php-mysql/orders/orders_with_line_no.txt";
 
-$outputString = "writing sample";
+$outputString = generateLineNo() . " writing sample " . "\n"
+            . generateLineNo() . " writing sample " . "\n"
+            . generateLineNo() . " writing sample " . "\n";
+
+// echo 'os' . $outputString;
+
+// $outputString = generateLineNo();
 
 if (file_exists($fileName)) {
     @$f = fopen($fileName, 'ab');
@@ -19,4 +25,10 @@ if (file_exists($fileName)) {
 
     echo "<p>Order written.</p>";
 
+}
+
+function generateLineNo() {
+    static $lineNo = 89;
+    $lineNo ++;
+    return $lineNo;
 }

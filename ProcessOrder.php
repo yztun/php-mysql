@@ -90,14 +90,19 @@
 
             echo "<span class='number'> $". number_format($totalAmt, 2) . "</span>";
 
-            echo "<p>Address to ship is ".htmlspecialchars($address). "</p>";
+            echo "<p>Address to ship is : ".htmlspecialchars($address). "</p>";
 
-            $outputString = "\n<<< Start Order \n" . $date."\t". $tires . " tires, \t " 
+            // $outputString = "\n<<< Start Order \n" . $date."\t". $tires . " tires, \t " 
+            //                           . $oil . " oil,\t "
+            //                           . $spark . " spark plugs,\t\$ "
+            //                           . $totalAmt . ",\t" . $address . "\nEnd Order >>> \n";
+
+            $outputString = $date."\t". $tires . " tires, \t " 
                                       . $oil . " oil,\t "
                                       . $spark . " spark plugs,\t\$ "
-                                      . $totalAmt . ",\t" . $address . "\nEnd Order >>> \n";
+                                      . $totalAmt . ",\t" . $address . "\n" ;
 
-            $fileName = "$document_root/php-mysql/orders/orders1.txt";
+            $fileName = "$document_root/php-mysql/orders/orders.txt";
 
             if (file_exists($fileName)) {
                 @$fp = fopen($fileName, 'ab');
