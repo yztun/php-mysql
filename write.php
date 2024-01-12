@@ -4,11 +4,15 @@
 
 $document_root = $_SERVER['DOCUMENT_ROOT'];
 
+echo $document_root;
+
 $fileName = "$document_root/php-mysql/orders/orders_with_line_no.txt";
 
-$outputString = generateLineNo() . " writing sample " . "\n"
-            . generateLineNo() . " writing sample " . "\n"
-            . generateLineNo() . " writing sample " . "\n";
+$outputString = " writing sample " . "\n";
+
+// $outputString = generateLineNo() . " writing sample " . "\n"
+//             . generateLineNo() . " writing sample " . "\n"
+//             . generateLineNo() . " writing sample " . "\n";
 
 // echo 'os' . $outputString;
 

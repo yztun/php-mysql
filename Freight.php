@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bob's Auto Parts - Freight Costs</title>
-    <link rel="stylesheet" href="css/fright.css">
+    <link rel="stylesheet" href="css/freight.css">
 </head>
 <body>
 	<div class="container">

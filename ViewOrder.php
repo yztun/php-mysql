@@ -23,7 +23,9 @@
                 if ($fp) {
                     while (!feof($fp)) {
                         $order = fgets($fp);
-                        echo "<p>" . htmlspecialchars($order) . "</p><hr>";
+                        if (!empty($order)) {
+                            echo "<p>" . htmlspecialchars($order) . "</p><hr>";
+                        }
                     }
 
                 }
