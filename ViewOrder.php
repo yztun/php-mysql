@@ -15,21 +15,18 @@
         <h2>Customer Orders</h2>
 
         <?php
-            $fileName = "$document_root/php-mysql/orders/orders.txt";
+            $orders = file("$document_root/php-mysql/orders/orders.txt");
+            $ordersCount = count($orders);
 
-            if (file_exists($fileName)) {
-                @$fp = fopen($fileName, 'r');
-
-                if ($fp) {
-                    while (!feof($fp)) {
-                        $order = fgets($fp);
-                        if (!empty($order)) {
-                            echo "<p>" . htmlspecialchars($order) . "</p><hr>";
-                        }
-                    }
-
-                }
+            if ($ordersCount == 0) {
+                echo "<p><strong>No orders pending. <br/>
+                        Please try again later.</strong></p>";
             }
+
+            for ($i=0; $i<$ordersCount; $i++) {
+                echo $orders[$i] . "<br/>";
+            }
+
         ?>
     </div>
 </body>

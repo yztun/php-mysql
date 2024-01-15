@@ -1,4 +1,3 @@
-09:26, 10 January 2024	10 tires, 	 20 oil,	 30 spark plugs,	$ 1452,	Mingalar St, Kamayut Township
-09:27, 10 January 2024	5 tires, 	 10 oil,	 20 spark plugs,	$ 748,	Dhamar yone st, Hlaing Township
-09:27, 10 January 2024	10 tires, 	 20 oil,	 50 spark plugs,	$ 1540,	Building 19, MICT Park
-05:22, 12 January 2024	10 tires, 	 30 oil,	 20 spark plugs,	$ 1518,	No 15, A One Street, Mayangone
+05:57, 15 January 2024	10 tires 	 15 oil	 20 spark plugs	$ 1353	No. 34, 27th street, Pabedan
+05:58, 15 January 2024	5 tires 	 10 oil	 15 spark plugs	$ 726	No.20, Mingalar street, Kamayut
+05:58, 15 January 2024	10 tires 	 20 oil	 50 spark plugs	$ 1540	No.15, Damaryone street, Hlaing

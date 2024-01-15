@@ -97,10 +97,10 @@
             //                           . $spark . " spark plugs,\t\$ "
             //                           . $totalAmt . ",\t" . $address . "\nEnd Order >>> \n";
 
-            $outputString = $date."\t". $tires . " tires, \t " 
-                                      . $oil . " oil,\t "
-                                      . $spark . " spark plugs,\t\$ "
-                                      . $totalAmt . ",\t" . $address . "\n" ;
+            $outputString = $date."\t". $tires . " tires \t " 
+                                      . $oil . " oil\t "
+                                      . $spark . " spark plugs\t\$ "
+                                      . $totalAmt . "\t" . $address . "\n" ;
 
             $fileName = "$document_root/php-mysql/orders/orders.txt";
 
