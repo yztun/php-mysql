@@ -28,7 +28,8 @@ label {
 }
 input,
 button,
-textarea {
+textarea,
+small {
     grid-column: 2 / 3;
 }
 .heading {
@@ -38,7 +39,7 @@ textarea {
     text-transform: capitalize;
     display: inline;
 }
-#btnSubmit {
+.btnSubmit {
     margin-top: 20px;
     color: white;
     border-radius: 7px;
@@ -49,7 +50,7 @@ textarea {
     outline: none;
     text-transform: capitalize;
 }
-#btnSubmit:hover {
+.btnSubmit:hover {
     background: darkblue;
     box-shadow: 3px solid red;
     color: #00BCDD;
