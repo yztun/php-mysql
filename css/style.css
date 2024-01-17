@@ -98,3 +98,14 @@ input[type=text]:focus, textarea:focus {
     font-weight: bold;
     font-size: 1.5rem;
 }
+.cell {
+    display: grid;
+    place-content: center;
+    color: darkblue;
+    border: 2px solid hsl(210deg, 8%, 50%);
+    border-radius: 4px;
+    padding: 5px;
+    font-weight: 400;
+    background: white;
+    grid-gap: 20px;
+}
