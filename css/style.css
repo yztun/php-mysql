@@ -83,6 +83,10 @@ input[type=text]:focus, textarea:focus {
     color: red;
     font-style: italic;
 }
+.info {
+    color: green;
+    font-style: italic;
+}
 .tbl-order {
     width: 750px;
     display: grid;

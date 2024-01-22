@@ -4,13 +4,15 @@
     const EMAIL_INVALID = 'Please enter a valid email!';
     const FEEDBACK_REQUIRED = 'Please enter your feedback!';
 
+    const FB_SENT = 'FeedBack sent successfully!';
+    const FB_NOT_SENT = 'Unalbe to send your feedback!';
+
     if (isset($_POST['btnSubmit'])) {
-        echo 'btnSubmit';
 
         $errors = [];
+        $msg    = [];
 
         // validation process
-
         $name     = filter_input(INPUT_POST, 'txtName', FILTER_SANITIZE_STRING);
 
         if ($name) {
@@ -43,6 +45,14 @@
             $errors['feedback'] = NAME_REQUIRED;
         }
 
+        function sendMail($to, $sub, $content, $add) {
+            if (@mail($to, $sub, $content, $add)) {
+                return FB_SENT;
+            } else {
+                return FB_NOT_SENT;
+            }
+        }
+
         if (count($errors) === 0) {
             $toAdd = "yarzartun.zotefamily@gmail.com";
 
@@ -63,7 +73,7 @@
             $fromAddress = "From: pfalllay@gmail.com";
 
             // send mail
-            mail($toAdd, $subject, $mailContent, $fromAddress);
+            $msg['success'] = sendMail($toAdd, $subject, $mailContent, $fromAddress);
         } 
 
     }
@@ -82,6 +92,8 @@
         <h1>Customer Feedback</h1>
         <h3><code>Please tell us what you think.</code></h3> 
 
+        <!-- <p class="info"><?php echo $msg['success'] ?></p> -->
+
         <form action="Feedback.php" method="post">
 
             <label for="txtName">Your Name:</label>
@@ -94,7 +106,10 @@
 
             <label for="txtFeedback">Your Feedback:</label>
             <textarea name="txtFeedback" id=""></textarea>
+
             <small class="error"><?php echo $errors['feedback'] ?? '' ?></small>
+
+            <small class="info"><?php echo $msg['success'] ?? '' ?></small>
 
             <button type="submit" name="btnSubmit" class="btnSubmit">Send Feedback</button>
         </form>
