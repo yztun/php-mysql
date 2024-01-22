@@ -5,7 +5,7 @@
     const FEEDBACK_REQUIRED = 'Please enter your feedback!';
 
     const FB_SENT = 'FeedBack sent successfully!';
-    const FB_NOT_SENT = 'Unalbe to send your feedback!';
+    const FB_NOT_SENT = 'Please try again. Unalbe to send your feedback!';
 
     if (isset($_POST['btnSubmit'])) {
 
