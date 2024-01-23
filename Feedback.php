@@ -46,7 +46,7 @@
         }
 
         function sendMail($to, $sub, $content, $add) {
-            if (@mail($to, $sub, $content, $add)) {
+            if (mail($to, $sub, $content, $add)) {
                 return FB_SENT;
             } else {
                 return FB_NOT_SENT;
@@ -56,7 +56,7 @@
         if (count($errors) === 0) {
             $toAdd = "yarzartun.zotefamily@gmail.com";
 
-            $subject = "FeedBack from bob website ";
+            $subject = "Feedback from bob website ";
 
             if (preg_match('/shop|customer service|retail/', $feedBack)) {
                 $subject .= ' : retail';
