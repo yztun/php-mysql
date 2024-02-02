@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container-search">
-        <form action="functions/search.php" method="post" class="formSearch">
+        <form action="functions/fetch.php?q=css" method="post" class="formSearch">
             <div class="search">
                 <input class="searchTerm" type="text" name="txtSearch" placeholder="Enter Keywords?">
                 <button type="submit" class="searchButton">
