@@ -8,8 +8,8 @@ const tbl = document.createElement('div');
 tbl.classList.add('table');
 
 function createTable(data) {
-    createHeader(tbl);
-    createBody(tbl, data);
+    createHeader();
+    createBody(data);
     document.querySelector('.container-fetch').appendChild(tbl);
 }
 
@@ -25,7 +25,7 @@ function createHeader() {
     });
 }
 
-function createBody(tbl, content) {
+function createBody(content) {
 
     content.forEach(data => {
         const cell1 = document.createElement('div');
